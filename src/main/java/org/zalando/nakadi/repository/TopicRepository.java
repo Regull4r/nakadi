@@ -46,7 +46,7 @@ public interface TopicRepository {
 
     boolean topicExists(String topic) throws TopicRepositoryException;
 
-    void syncPostBatch(String topicId, List<BatchItem> batch, String eventTypeName, boolean delete)
+    void syncPostBatch(String topicId, List<BatchItem> batch, String eventTypeName)
             throws EventPublishingException;
 
     void repartition(String topic, int partitionsNumber) throws CannotAddPartitionToTopicException,
